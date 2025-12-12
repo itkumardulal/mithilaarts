@@ -5,13 +5,14 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
+  { href: '/', label: 'Home' }, // Added Home
   {
     label: 'About',
     children: [
       { href: '/about', label: 'Our Story' },
       { href: '/mission', label: 'Mission & Vision' },
       { href: '/recognition', label: 'Recognition & Honors' },
-      { href: '/contact', label: 'Contact' }, // Contact added here
+      { href: '/contact', label: 'Contact' },
     ],
   },
   {
@@ -60,11 +61,11 @@ export const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-full bg-gradient-sindoor flex items-center justify-center shadow-glow-primary group-hover:scale-110 transition-transform duration-300">
-<img 
-  src="https://i.imgur.com/4W7jbbM.png" 
-  alt="M" 
-  className="w-12 h-10 md:w-16 md:h-12"
-/>
+            <img 
+              src="https://i.imgur.com/4W7jbbM.png" 
+              alt="M" 
+              className="w-12 h-10 md:w-16 md:h-12"
+            />
           </div>
           <div className="hidden sm:block">
             <h1 className="font-playfair font-bold text-base leading-tight text-foreground">
@@ -119,7 +120,7 @@ export const Header = () => {
           ))}
         </nav>
 
-        {/* Donate Button Only */}
+        {/* Donate Button */}
         <div className="hidden lg:flex items-center gap-3">
           <Button asChild variant="donate" size="sm" className="gap-2">
             <Link to="/contact">
